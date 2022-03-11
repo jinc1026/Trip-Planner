@@ -1,5 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-projectData = {};
+let projectData = {};
 
 // Require Express to run server and routes
 const express = require("express");
@@ -22,7 +22,7 @@ app.use(express.static('website'));
 
 
 // Setup Server
-const port = 8080;
+const port = 8082;
 
 app.listen(port,()=>{
 	console.log(`Connected to local server: Port ${port}`);
@@ -34,14 +34,23 @@ app.get("/", (req,res)=>{
 
 //GET route that returns the projectData object in the server code
 app.get("/recent", (req,res)=>{
+	console.log("---recent called---");
 	res.send(projectData);
 });
 
 //POST route that adds incoming data to projectData
 app.post("/add", (req,res)=>{
+	console.log("---add called---");
 	projectData.date = req.body.date;
+	projectData.city = req.body.city;
+	projectData.country = req.body.country;
 	projectData.weather = req.body.weather;
 	projectData.temp = req.body.temp;
-	projectData.userResponse = req.body.userResponse;
-	console.log("projectData has been updated with new user input");
+	projectData.precip = req.body.precip;
+	projectData.rh = req.body.rh;
+	projectData.wind_spd = req.body.wind_spd;
+	
+	console.log("projectData has been updated with new trip destination info: ");
+	console.log(projectData);
+	res.send(projectData);
 });
