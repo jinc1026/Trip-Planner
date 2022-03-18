@@ -1,19 +1,28 @@
 body{
-    background: #fffff8;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	 margin: 0;
+    background: #ffffff;
 }
 
 #app{
     display: grid;
     grid-auto-rows: minmax(100px, auto);
     grid-template-columns:  50%;
-    height:100vh;
-    background: #f23557;
-    color: #f0d43a;
+    height: auto;
+    background: #ffffff;
+    color: #444444;
     justify-content: center;
     grid-gap: 1em;
     font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+	 padding-bottom: 20px;
+}
+
+#location{
+	margin-bottom: 20px;
+}
+
+#error{
+	color: #dc3545;
+	margin-bottom: 20px;
 }
 
 .holder{
@@ -23,72 +32,96 @@ body{
 }
 
 .entry{
-    background: rgba(59, 74, 107, .4);
-    margin-bottom: 10px;
-}
-
-#entryHolder{
-
-}
-
-#date{
-
-}
-
-#temp{
-
-}
-
-#content{
-
+	 display: flex;
+	justify-content: center;
+    background: #e9ecef;
+    margin-top: 10px;
+	 margin-bottom: 10px;
+	 padding: 10px 15px;
+	 border-radius: 3px;
+	 width: 100%;
 }
 
 .headline {
     font-size: 40px;
-    margin-top: 10px;
-}
-.title{
-
-}
-
-/*  Basic Styling To Override Default For Basic HTML Elements */
-label{
-    display:block;
-    font-size: 27px;
+	 color: white;
+	 background-color: #f23557;
+	 margin-bottom: 20px;
+	 padding: 10px 0;
 }
 
-input{
-    display:block;
-    height: 60px;
-    width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
+.userInput{
+    display:  flex;
+    flex-direction:  column;
+    align-items: flex-start;
+}
+
+.cityImage {
+	width: 300px;
+	height: 200px;
+	object-fit: contain;
+	margin-right: 10px;
+}
+
+.weatherInfo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 20px;
+	font-size: 18px;
+}
+
+.addBtn{
+    width: 100%;
+    height: 80px;
     font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-}
-
-button{
-    width: 400px;
-    height: 100px;
-    background: #3b4a6b;
-    color: #f0d43a;
-    font-size: 26px;
-    font-family: 'Oswald', sans-serif;
     border: none;
     box-shadow: 2px 4px 5px #444;
     margin-top: 10px;
 }
+
+.deleteBtn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 30px;
+	margin-top: 10px;
+	box-shadow: 2px 4px 5px #444;
+}
+
+.footer {
+	margin-top: 40px;
+	text-align: center;
+	font-size: 12px;
+	position: absolute;
+   bottom: 0;
+   width: 100%;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label{
+    display: block;
+    font-size: 20px;
+}
+
+input{
+    display: block;
+    height: 60px;
+    width: 320px;
+    font-size: 20px;
+    border: none;
+	 padding:0 10px;
+}
+
 h1{
     font-size: 36px;
 }
 
-textarea{
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+img{
+	border-radius: 3px;
 }
+
 /* Reset style for HTML element on active to have no border*/
 input:focus,
 select:focus,
@@ -97,20 +130,17 @@ button:focus {
     outline: none;
 }
 /* Style for Placeholder Text*/
-::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
+::placeholder { /* Firefox, Chrome, Opera */  
+    font-family: sans-serif;
 
 } 
   
 :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
+    font-family: sans-serif;
 
 } 
   
 ::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
+    font-family: sans-serif;
 
 } 
