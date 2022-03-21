@@ -5,10 +5,9 @@ This project gave me the opportunity to put all of the skills I have learned int
 
 
 ## Instruction
-Type in the zipcode that you'd like to get the weather info about and also type in your feeling!
-The app will get show the weather info and temperature on the bottom of the page.
+Type in the city name and date of your departure of the trip.  It will retrieve whether info of the destination and city image through APIs. If the trip is within one week, it will display the current weather info and if the trip date is further than a week, it will display forecast weather info.
 
 ## What I learned
 By completing this project, I learned how to use async function and promises. By utilizing async function, I was able to change promises to trigger next event based on successfuly execution of the previous functions.  For example, once fetch function to get weather data is correctly processed, then POST route is triggered to input the data into the end point. 
 
-Because it was my first time developing an app utilizing API, it gave me a lot of thoughts about the endless posibilities of web-developemt and applications.
+
