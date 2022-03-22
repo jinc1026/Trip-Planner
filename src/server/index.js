@@ -31,7 +31,7 @@ app.listen(port,()=>{
 });
 
 app.get("/", (req,res)=>{
-	res.sendFile(path.resolve('src/client/views/index.html'))
+	res.sendFile(path.resolve('src/client/views/index.html'));
 });
 
 //GET route that returns the projectData object in the server code
@@ -52,3 +52,6 @@ app.post("/add", (req,res)=>{
 	
 	res.send(projectData);
 });
+
+// Export for JEST testing
+module.exports = app;

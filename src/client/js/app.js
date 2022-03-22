@@ -92,6 +92,7 @@ const getCoordinateInfo = async function(location){
 	try {
 		const coordinateResponse = await fetch(openWeatherCoordinateUrl + location + apiKey);
 		const coordinateData = await coordinateResponse.json();
+		
 		if (!coordinateResponse.ok || coordinateData.length === 0) {
 			//Things to be done if the response is bad
 			document.getElementById("error").innerHTML = "Incorrect city name! Please double check the city name";

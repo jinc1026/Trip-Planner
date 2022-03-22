@@ -1,22 +1,19 @@
-html, body{
-	 margin: 0;
-    background: #ffffff;
-	 height: 100%;
-}
-
 body {
+  margin: 0;
+  background: #ffffff;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .content {
-  flex: 1 0 auto;
+	flex: 1 0 auto;
 }
 
 #app{
     display: grid;
     grid-auto-rows: minmax(100px, auto);
-    grid-template-columns: 50%;
+    grid-auto-columns: minmax(650px, 800px);
     height: auto;
     background: #ffffff;
     color: #444444;
