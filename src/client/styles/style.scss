@@ -10,7 +10,7 @@ body {
 	flex: 1 0 auto;
 }
 
-#app{
+#app {
     display: grid;
     grid-auto-rows: minmax(100px, auto);
     grid-auto-columns: minmax(650px, 800px);
@@ -125,6 +125,25 @@ h1{
 
 img{
 	border-radius: 3px;
+}
+
+@media (max-width: 480px){
+	#app {
+		grid-auto-columns: 80%;
+	}
+	.entry{
+	 	display: flex;
+		flex-direction: column;
+		justify-content: center;
+	 	align-items: center;
+	}
+	.cityImage {
+		object-fit: contain;
+		margin: 0;
+	}
+	.weatherInfo {
+		margin-left: 0;
+	}
 }
 
 /* Reset style for HTML element on active to have no border*/

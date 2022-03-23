@@ -1,18 +1,7 @@
 /* Global Variables */
 // Web API URL and apiKey info
-const baseUrl = "http://api.openweathermap.org/data/2.5/weather?zip=";
-const openWeatherCoordinateUrl = "http://api.openweathermap.org/geo/1.0/direct?q=";
-const apiKey = "&limit=1&appid=eb5a120ff7fc79e89928882f7c56d924";
-
-const weatherBitBaseUrlCurrent ="https://api.weatherbit.io/v2.0/current?lat=";
-const weatherBitBaseUrlForecast = "https://api.weatherbit.io/v2.0/forecast/daily?lat=";
-const weatherBitKey = "&key=c086327b5e2345ddb6a22055e7e275a8";
-
-const geonamesKey = "&username=jinc1026";
-
-const pixabayUrl = "https://pixabay.com/api/?";
-const pixabayKey = "key=26197022-380369692144c45e27439b513";
-
+import {baseUrl, openWeatherCoordinateUrl, apiKey, weatherBitBaseUrlCurrent, weatherBitBaseUrlForecast, weatherBitKey,
+			geonamesKey, pixabayKey, pixabayUrl} from "../../server/apiKeys.js";
 
 // Create a new date instance dynamically with JS
 let d = new Date();
@@ -20,7 +9,10 @@ let currentDate = new Date().toISOString().slice(0, 10);
 document.getElementById("departureDate").setAttribute("min",currentDate);
 
 // Add an event listener to the generate button to start async function to get weather info
-document.getElementById("generate").addEventListener("click", weatherInfoStartCallBack);
+// and this click event will be functional after DOM is fully loaded
+document.addEventListener('DOMContentLoaded',()=>{
+	document.getElementById("generate").addEventListener("click", weatherInfoStartCallBack);
+})
 
 let latitude = "";
 let longitude ="";
